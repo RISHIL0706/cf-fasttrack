@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CF FastTrack</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 320px;
+            padding: 22px;
+            font-family: 'Segoe UI', sans-serif;
+
+            background: linear-gradient(145deg, #0f172a, #111827);
+            color: white;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 24px;
+            color: #60a5fa;
+            letter-spacing: 0.5px;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 13px;
+            color: #94a3b8;
+            margin-top: -8px;
+        }
+
+        .input-box {
+            position: relative;
+        }
+
+        input {
+            width: 100%;
+            padding: 14px 16px;
+
+            border: 1px solid #334155;
+            border-radius: 14px;
+
+            background: #1e293b;
+            color: white;
+
+            font-size: 16px;
+            letter-spacing: 1px;
+
+            outline: none;
+
+            transition: 0.3s;
+        }
+
+        input:focus {
+            border-color: #3b82f6;
+            box-shadow: 0 0 12px rgba(59, 130, 246, 0.5);
+        }
+
+        input::placeholder {
+            color: #64748b;
+        }
+
+        .example {
+            font-size: 12px;
+            color: #64748b;
+            margin-top: 6px;
+            margin-left: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+
+            border: none;
+            border-radius: 14px;
+
+            background: linear-gradient(135deg, #2563eb, #3b82f6);
+
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.4);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 11px;
+            color: #64748b;
+            margin-top: 2px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h2>⚡ CF FastTrack</h2>
+
+        <div class="subtitle">
+            Open Codeforces problems instantly
+        </div>
+
+        <div class="input-box">
+
+            <input
+                type="text"
+                id="problemInput"
+                placeholder="Enter Problem Code"
+            >
+
+            <div class="example">
+                Example: 1008A, 1791C, 2000D
+            </div>
+
+        </div>
+
+        <button id="openBtn">
+            🚀 Open Problem
+        </button>
+
+        <div class="footer">
+            Made for Competitive Programmers
+        </div>
+
+    </div>
+
+    <script src="popup.js"></script>
+
+</body>
+
+</html>
