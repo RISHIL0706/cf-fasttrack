@@ -22,8 +22,8 @@
 
 ```txt
 1008A
-1791C
-2000D
+1791/C
+2000-D
 ```
 
 ---
@@ -50,7 +50,7 @@
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/RISHIL0706/cf-fasttrack.git
+git clone https://github.com/your-username/cf-fasttrack.git
 ```
 
 ### 2. Open Chrome Extensions
