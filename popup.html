@@ -13,10 +13,9 @@
         }
 
         body {
-            width: 320px;
+            width: 340px;
             padding: 22px;
             font-family: 'Segoe UI', sans-serif;
-
             background: linear-gradient(145deg, #0f172a, #111827);
             color: white;
         }
@@ -24,25 +23,20 @@
         .container {
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 15px;
         }
 
         h2 {
             text-align: center;
             font-size: 24px;
             color: #60a5fa;
-            letter-spacing: 0.5px;
         }
 
         .subtitle {
             text-align: center;
             font-size: 13px;
             color: #94a3b8;
-            margin-top: -8px;
-        }
-
-        .input-box {
-            position: relative;
+            margin-top: -7px;
         }
 
         input {
@@ -55,9 +49,7 @@
             background: #1e293b;
             color: white;
 
-            font-size: 16px;
-            letter-spacing: 1px;
-
+            font-size: 15px;
             outline: none;
 
             transition: 0.3s;
@@ -65,18 +57,11 @@
 
         input:focus {
             border-color: #3b82f6;
-            box-shadow: 0 0 12px rgba(59, 130, 246, 0.5);
+            box-shadow: 0 0 12px rgba(59, 130, 246, 0.4);
         }
 
         input::placeholder {
             color: #64748b;
-        }
-
-        .example {
-            font-size: 12px;
-            color: #64748b;
-            margin-top: 6px;
-            margin-left: 4px;
         }
 
         button {
@@ -93,7 +78,6 @@
             font-weight: bold;
 
             cursor: pointer;
-
             transition: 0.3s;
         }
 
@@ -106,13 +90,57 @@
             transform: scale(0.98);
         }
 
+        .hint {
+            text-align: center;
+            font-size: 11px;
+            color: #64748b;
+        }
+
+        .results {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-height: 220px;
+            overflow-y: auto;
+        }
+
+        .result {
+            padding: 10px;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .result:hover {
+            border-color: #3b82f6;
+            background: #263449;
+        }
+
+        .result-name {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .result-code {
+            margin-top: 4px;
+            font-size: 11px;
+            color: #94a3b8;
+        }
+
+        .message {
+            text-align: center;
+            font-size: 12px;
+            color: #94a3b8;
+        }
+
         .footer {
             text-align: center;
             font-size: 11px;
             color: #64748b;
-            margin-top: 2px;
+            margin-top: 3px;
         }
-
     </style>
 </head>
 
@@ -123,26 +151,25 @@
         <h2>⚡ CF FastTrack</h2>
 
         <div class="subtitle">
-            Open Codeforces problems instantly
+            Find and open Codeforces problems
         </div>
 
-        <div class="input-box">
-
-            <input
-                type="text"
-                id="problemInput"
-                placeholder="Enter Problem Code"
-            >
-
-            <div class="example">
-                Example: 1008A, 1791C, 2000D
-            </div>
-
-        </div>
+        <input
+            type="text"
+            id="problemInput"
+            placeholder="1008A or problem name..."
+            autocomplete="off"
+        >
 
         <button id="openBtn">
-            🚀 Open Problem
+            🚀 Find & Open
         </button>
+
+        <div class="hint">
+            Try: 1008A • 1008/A • 1008-A • Distinct Elements
+        </div>
+
+        <div id="results" class="results"></div>
 
         <div class="footer">
             Made for Competitive Programmers
